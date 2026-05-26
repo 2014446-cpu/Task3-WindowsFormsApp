@@ -50,11 +50,11 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("MS Reference Sans Serif", 40.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(378, 3);
+            this.label6.Location = new System.Drawing.Point(415, 3);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(443, 82);
+            this.label6.Size = new System.Drawing.Size(328, 82);
             this.label6.TabIndex = 37;
-            this.label6.Text = "INVENTORY";
+            this.label6.Text = "ORDERS";
             // 
             // btnLoadOrder
             // 
