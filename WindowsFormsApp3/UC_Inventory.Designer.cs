@@ -35,11 +35,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.txtDelete = new System.Windows.Forms.TextBox();
             this.dgvInventory = new System.Windows.Forms.DataGridView();
-            this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductBrand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbProductDetails = new System.Windows.Forms.GroupBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.txtQuantity = new System.Windows.Forms.TextBox();
@@ -54,6 +49,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductBrand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
@@ -143,10 +143,9 @@
             this.dgvInventory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ProductID,
             this.ProductName,
-            this.ProductPrice,
             this.ProductBrand,
+            this.ProductPrice,
             this.ProductQuantity});
-            this.dgvInventory.GridColor = System.Drawing.Color.Gray;
             this.dgvInventory.Location = new System.Drawing.Point(466, 102);
             this.dgvInventory.Margin = new System.Windows.Forms.Padding(4);
             this.dgvInventory.Name = "dgvInventory";
@@ -154,51 +153,6 @@
             this.dgvInventory.RowHeadersWidth = 51;
             this.dgvInventory.Size = new System.Drawing.Size(558, 436);
             this.dgvInventory.TabIndex = 10;
-            // 
-            // ProductID
-            // 
-            this.ProductID.DataPropertyName = "ProductID";
-            this.ProductID.HeaderText = "ID";
-            this.ProductID.MinimumWidth = 6;
-            this.ProductID.Name = "ProductID";
-            this.ProductID.ReadOnly = true;
-            this.ProductID.Width = 125;
-            // 
-            // ProductName
-            // 
-            this.ProductName.DataPropertyName = "ProductName";
-            this.ProductName.HeaderText = "Name";
-            this.ProductName.MinimumWidth = 6;
-            this.ProductName.Name = "ProductName";
-            this.ProductName.ReadOnly = true;
-            this.ProductName.Width = 125;
-            // 
-            // ProductPrice
-            // 
-            this.ProductPrice.DataPropertyName = "ProductPrice";
-            this.ProductPrice.HeaderText = "Price";
-            this.ProductPrice.MinimumWidth = 6;
-            this.ProductPrice.Name = "ProductPrice";
-            this.ProductPrice.ReadOnly = true;
-            this.ProductPrice.Width = 125;
-            // 
-            // ProductBrand
-            // 
-            this.ProductBrand.DataPropertyName = "ProductBrand";
-            this.ProductBrand.HeaderText = "Brand";
-            this.ProductBrand.MinimumWidth = 6;
-            this.ProductBrand.Name = "ProductBrand";
-            this.ProductBrand.ReadOnly = true;
-            this.ProductBrand.Width = 125;
-            // 
-            // ProductQuantity
-            // 
-            this.ProductQuantity.DataPropertyName = "ProductQuantity";
-            this.ProductQuantity.HeaderText = "Quantity";
-            this.ProductQuantity.MinimumWidth = 6;
-            this.ProductQuantity.Name = "ProductQuantity";
-            this.ProductQuantity.ReadOnly = true;
-            this.ProductQuantity.Width = 125;
             // 
             // gbProductDetails
             // 
@@ -355,6 +309,51 @@
             this.btnAdd.Text = "Add Product";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
+            // ProductID
+            // 
+            this.ProductID.DataPropertyName = "ProductID";
+            this.ProductID.HeaderText = "ID";
+            this.ProductID.MinimumWidth = 6;
+            this.ProductID.Name = "ProductID";
+            this.ProductID.ReadOnly = true;
+            this.ProductID.Width = 125;
+            // 
+            // ProductName
+            // 
+            this.ProductName.DataPropertyName = "ProductName";
+            this.ProductName.HeaderText = "Name";
+            this.ProductName.MinimumWidth = 6;
+            this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
+            this.ProductName.Width = 125;
+            // 
+            // ProductBrand
+            // 
+            this.ProductBrand.DataPropertyName = "ProductBrand";
+            this.ProductBrand.HeaderText = "Brand";
+            this.ProductBrand.MinimumWidth = 6;
+            this.ProductBrand.Name = "ProductBrand";
+            this.ProductBrand.ReadOnly = true;
+            this.ProductBrand.Width = 125;
+            // 
+            // ProductPrice
+            // 
+            this.ProductPrice.DataPropertyName = "ProductPrice";
+            this.ProductPrice.HeaderText = "Price";
+            this.ProductPrice.MinimumWidth = 6;
+            this.ProductPrice.Name = "ProductPrice";
+            this.ProductPrice.ReadOnly = true;
+            this.ProductPrice.Width = 125;
+            // 
+            // ProductQuantity
+            // 
+            this.ProductQuantity.DataPropertyName = "ProductQuantity";
+            this.ProductQuantity.HeaderText = "Quantity";
+            this.ProductQuantity.MinimumWidth = 6;
+            this.ProductQuantity.Name = "ProductQuantity";
+            this.ProductQuantity.ReadOnly = true;
+            this.ProductQuantity.Width = 125;
+            // 
             // UC_Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -383,11 +382,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TextBox txtDelete;
         private System.Windows.Forms.DataGridView dgvInventory;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductBrand;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductQuantity;
         private System.Windows.Forms.GroupBox gbProductDetails;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.TextBox txtQuantity;
@@ -402,5 +396,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductBrand;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductQuantity;
     }
 }

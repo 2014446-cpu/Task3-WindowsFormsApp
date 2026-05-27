@@ -155,6 +155,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlContent.ResumeLayout(false);

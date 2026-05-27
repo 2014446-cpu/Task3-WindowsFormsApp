@@ -48,6 +48,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(214, 41);
             this.txtUsername.TabIndex = 0;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // txtPassword
             // 
@@ -60,6 +61,7 @@
             this.txtPassword.Size = new System.Drawing.Size(214, 41);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // label1
             // 
@@ -72,6 +74,7 @@
             this.label1.Size = new System.Drawing.Size(143, 38);
             this.label1.TabIndex = 2;
             this.label1.Text = "Password";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -84,6 +87,7 @@
             this.label2.Size = new System.Drawing.Size(151, 38);
             this.label2.TabIndex = 3;
             this.label2.Text = "Username";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnLogin
             // 
@@ -121,6 +125,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(465, 391);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form2
             // 
@@ -138,6 +143,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form2";
             this.Text = "FormLogin";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
