@@ -16,7 +16,7 @@ namespace WindowsFormsApp3
     {
         private BindingList<Product> _availableProducts;
         private BindingList<OrderItem> _currentOrderItems = new BindingList<OrderItem>();
-        private string _csvPath = "./shop-product-catalog.csv.csv";
+        private string _csvPath = "./shop-product-catalog.csv";
         public UC_Orders()
         {
             InitializeComponent();
