@@ -48,7 +48,7 @@
             this.pnlContent.Location = new System.Drawing.Point(267, 0);
             this.pnlContent.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(1030, 620);
+            this.pnlContent.Size = new System.Drawing.Size(1186, 820);
             this.pnlContent.TabIndex = 1;
             this.pnlContent.Click += new System.EventHandler(this.pnlContent_Click);
             this.pnlContent.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
@@ -81,7 +81,7 @@
             this.button2.BackColor = System.Drawing.SystemColors.ControlText;
             this.button2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(60, 203);
+            this.button2.Location = new System.Drawing.Point(60, 249);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(141, 36);
@@ -95,7 +95,7 @@
             this.btnOrders.BackColor = System.Drawing.SystemColors.ControlText;
             this.btnOrders.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrders.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnOrders.Location = new System.Drawing.Point(60, 334);
+            this.btnOrders.Location = new System.Drawing.Point(60, 412);
             this.btnOrders.Margin = new System.Windows.Forms.Padding(4);
             this.btnOrders.Name = "btnOrders";
             this.btnOrders.Size = new System.Drawing.Size(141, 36);
@@ -109,7 +109,7 @@
             this.btnCheckOut.BackColor = System.Drawing.SystemColors.ControlText;
             this.btnCheckOut.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCheckOut.Location = new System.Drawing.Point(60, 450);
+            this.btnCheckOut.Location = new System.Drawing.Point(60, 586);
             this.btnCheckOut.Margin = new System.Windows.Forms.Padding(4);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(141, 36);
@@ -130,7 +130,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(267, 620);
+            this.panel1.Size = new System.Drawing.Size(267, 820);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -138,7 +138,7 @@
             // 
             this.btnLogout.BackColor = System.Drawing.SystemColors.ControlText;
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogout.Location = new System.Drawing.Point(3, 593);
+            this.btnLogout.Location = new System.Drawing.Point(3, 794);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(126, 27);
             this.btnLogout.TabIndex = 4;
@@ -150,7 +150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1297, 620);
+            this.ClientSize = new System.Drawing.Size(1454, 820);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
