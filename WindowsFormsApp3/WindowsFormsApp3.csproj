@@ -88,6 +88,7 @@
     </Compile>
     <Compile Include="InventoryService.cs" />
     <Compile Include="OrderModel.cs" />
+    <Compile Include="OrderService.cs" />
     <Compile Include="Product1.cs">
       <SubType>UserControl</SubType>
     </Compile>

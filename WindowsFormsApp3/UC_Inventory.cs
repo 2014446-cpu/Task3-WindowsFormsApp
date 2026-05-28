@@ -89,7 +89,7 @@ namespace WindowsFormsApp3
         private void ClearFields()
         {
             txtID.Clear();
-            txtName.Clear();
+            txtName.Clear();////////////////////////////////////////////////////////////////////////////////////////
             txtBrand.Clear();
             txtPrice.Clear();
             txtQuantity.Clear();

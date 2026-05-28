@@ -27,11 +27,11 @@ namespace WindowsFormsApp3
                     {
                         try
                         {
-                            int id = int.Parse(parts[0]);
-                            string name = parts[1];
-                            string brand = parts[2];
-                            decimal price = decimal.Parse(parts[3]) / 100m;
-                            int quantity = int.Parse(parts[4]);
+                            int id = int.Parse(parts[0].Trim());
+                            string name = parts[1].Trim();
+                            string brand = parts[2].Trim();
+                            decimal price = decimal.Parse(parts[3].Trim()) / 100m;
+                            int quantity = int.Parse(parts[4].Trim());
 
                             products.Add(new Product(id, name, brand, price, quantity));
                         }
@@ -67,9 +67,47 @@ namespace WindowsFormsApp3
                         }
                     }
                 }
-            
-        
+        public static List<OrderItem> LoadShopCatalog(string filePath)
+        {
+            List<OrderItem> items = new List<OrderItem>();
+            if (!File.Exists(filePath))
+                return items;
+
+            try
+            {
+                var lines = File.ReadAllLines(filePath).Skip(1);
+
+                foreach (string line in lines)
+                {
+                    if (string.IsNullOrWhiteSpace(line)) continue;
+
+                    string[] parts = line.Split(',');
+
+                    if (parts.Length >= 5)
+                    {
+                        try
+                        {
+                            items.Add(new OrderItem
+                            {
+                                ProductID = int.Parse(parts[0].Trim()),
+                                ProductName = parts[1].Trim(),
+                                UnitPrice = decimal.Parse(parts[2].Trim()),
+                                Quantity = int.Parse(parts[3].Trim()),
+                            });
+                        }
+                        catch (Exception ex)
+                        {
+                            System.Diagnostics.Debug.WriteLine($"Error parsing shop catalog line: {line}, Error: {ex.Message}");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error reading shop catalog: {ex.Message}");
+            }
+
+            return items;
+        }
     }
 }
-
-
