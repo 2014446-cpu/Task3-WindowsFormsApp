@@ -36,7 +36,7 @@ namespace WindowsFormsApp3
         }
         private void LoadUCHome()
         {
-            //ShowScreen(new UC_Home());
+            ShowScreen(new UC_Home());
         }
 
         private void btnCheckOut_Click(object sender, EventArgs e)
