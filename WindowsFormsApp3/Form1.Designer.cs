@@ -32,10 +32,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.btnOrders = new System.Windows.Forms.Button();
-            this.btnCheckOut = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btnCheckout = new System.Windows.Forms.Button();
+            this.btnOrders = new System.Windows.Forms.Button();
             this.pnlContent.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -90,40 +90,12 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.btnInv_Click);
             // 
-            // btnOrders
-            // 
-            this.btnOrders.BackColor = System.Drawing.SystemColors.ControlText;
-            this.btnOrders.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrders.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnOrders.Location = new System.Drawing.Point(60, 412);
-            this.btnOrders.Margin = new System.Windows.Forms.Padding(4);
-            this.btnOrders.Name = "btnOrders";
-            this.btnOrders.Size = new System.Drawing.Size(141, 36);
-            this.btnOrders.TabIndex = 2;
-            this.btnOrders.Text = "Orders";
-            this.btnOrders.UseVisualStyleBackColor = false;
-            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
-            // 
-            // btnCheckOut
-            // 
-            this.btnCheckOut.BackColor = System.Drawing.SystemColors.ControlText;
-            this.btnCheckOut.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCheckOut.Location = new System.Drawing.Point(60, 586);
-            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(141, 36);
-            this.btnCheckOut.TabIndex = 3;
-            this.btnCheckOut.Text = "Checkout";
-            this.btnCheckOut.UseVisualStyleBackColor = false;
-            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Controls.Add(this.btnLogout);
-            this.panel1.Controls.Add(this.btnCheckOut);
+            this.panel1.Controls.Add(this.btnCheckout);
             this.panel1.Controls.Add(this.btnOrders);
+            this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -145,6 +117,34 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnCheckout
+            // 
+            this.btnCheckout.BackColor = System.Drawing.SystemColors.ControlText;
+            this.btnCheckout.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCheckout.Location = new System.Drawing.Point(63, 572);
+            this.btnCheckout.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.Size = new System.Drawing.Size(141, 36);
+            this.btnCheckout.TabIndex = 6;
+            this.btnCheckout.Text = "Checkout";
+            this.btnCheckout.UseVisualStyleBackColor = false;
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckOut_Click);
+            // 
+            // btnOrders
+            // 
+            this.btnOrders.BackColor = System.Drawing.SystemColors.ControlText;
+            this.btnOrders.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrders.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnOrders.Location = new System.Drawing.Point(63, 402);
+            this.btnOrders.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOrders.Name = "btnOrders";
+            this.btnOrders.Size = new System.Drawing.Size(141, 36);
+            this.btnOrders.TabIndex = 5;
+            this.btnOrders.Text = "Orders";
+            this.btnOrders.UseVisualStyleBackColor = false;
+            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
             // 
             // Form1
             // 
@@ -169,11 +169,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnOrders;
-        private System.Windows.Forms.Button btnCheckOut;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel pnlContent;
+        private System.Windows.Forms.Button btnCheckout;
+        private System.Windows.Forms.Button btnOrders;
     }
 }
 

@@ -16,7 +16,7 @@ namespace WindowsFormsApp3
     {
         private BindingList<Product> _inventoryList = new BindingList<Product>();
         private BindingSource _bindingSource = new BindingSource();
-        string filePath = "product.csv";
+        string filePath = "./product.csv";
         public UC_Inventory()
         {
             InitializeComponent();
@@ -48,6 +48,7 @@ namespace WindowsFormsApp3
             string brand = txtBrand.Text;
             decimal price = decimal.Parse(txtPrice.Text);
             int quantity = int.Parse(txtQuantity.Text);
+
             Product newProduct = new Product(newId, name, brand, price, quantity);
             _inventoryList.Add(newProduct);
 

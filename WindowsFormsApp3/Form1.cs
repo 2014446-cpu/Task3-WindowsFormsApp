@@ -41,7 +41,7 @@ namespace WindowsFormsApp3
 
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
-            ShowScreen(new UC_CheckOut());
+            ShowScreen(new UC_Checkout());
         }
 
         private void btnOrders_Click(object sender, EventArgs e)
