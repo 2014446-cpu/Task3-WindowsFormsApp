@@ -32,11 +32,11 @@ namespace WindowsFormsApp3
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ShowScreen(new UC_Home());
+            ShowScreen(new UC_Inventory());
         }
         private void LoadUCHome()
         {
-            ShowScreen(new UC_Home());
+            //ShowScreen(new UC_Home());
         }
 
         private void btnCheckOut_Click(object sender, EventArgs e)
@@ -99,6 +99,11 @@ namespace WindowsFormsApp3
 
                 this.Hide();
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

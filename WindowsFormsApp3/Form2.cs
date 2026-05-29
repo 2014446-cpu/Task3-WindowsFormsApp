@@ -85,5 +85,12 @@ namespace WindowsFormsApp3
         {
 
         }
+
+        private void btnForgot_Click(object sender, EventArgs e)
+        {
+            Form4 newForm = new Form4();
+            this.Hide();
+            newForm.Show();
+        }
     }
 }
