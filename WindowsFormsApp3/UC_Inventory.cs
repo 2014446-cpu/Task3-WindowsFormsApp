@@ -25,6 +25,7 @@ namespace WindowsFormsApp3
         private void Inventory_Load(object sender, EventArgs e)
         {
             LoadDataFromCSV();
+
         }
 
         private void LoadDataFromCSV()
@@ -90,7 +91,7 @@ namespace WindowsFormsApp3
         private void ClearFields()
         {
             txtID.Clear();
-            txtName.Clear();////////////////////////////////////////////////////////////////////////////////////////
+            txtName.Clear();
             txtBrand.Clear();
             txtPrice.Clear();
             txtQuantity.Clear();
@@ -201,7 +202,42 @@ namespace WindowsFormsApp3
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            txtBrand.Clear();
+            txtID.Clear();
+            txtName.Clear();
+            txtPrice.Clear();
+            txtQuantity.Clear();
+        }
+
+        private void txtDelete_TextChanged(object sender, EventArgs e)
+        {
 
         }
+
+        private void dgvInventory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void dgvInventory_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvInventory.SelectedRows.Count > 0) // make sure user select at least 1 row 
+            {
+                string ID = dgvInventory.SelectedRows[0].Cells[0].Value + string.Empty;
+                string Remove = dgvInventory.SelectedRows[0].Cells[0].Value + string.Empty;
+                string Name = dgvInventory.SelectedRows[0].Cells[1].Value + string.Empty;
+                string Price = dgvInventory.SelectedRows[0].Cells[3].Value + string.Empty;
+                string Brand = dgvInventory.SelectedRows[0].Cells[2].Value + string.Empty;
+                string BrandName = dgvInventory.SelectedRows[0].Cells[4].Value + string.Empty;
+
+                txtID.Text = ID;
+                txtName.Text = Name;
+                txtPrice.Text = Price;
+                txtBrand.Text = Brand;
+                txtQuantity.Text = BrandName;
+                txtDelete.Text = Remove;
+
+            }
+        }
     }
-    }
+}

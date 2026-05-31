@@ -19,6 +19,15 @@ namespace WindowsFormsApp3
 
         private void Home_Load(object sender, EventArgs e)
         {
+            var products = InventoryService.LoadFromCSV("product.csv");
+
+            int totalProducts = products.Count;
+            decimal totalValue = products.Sum(p => p.ProductPrice * p.ProductQuantity);
+            int lowStockCount = products.Count(p => p.ProductQuantity < 5);
+
+            lblTotalProducts.Text = "Total Products: " + totalProducts;
+            lblInventoryValue.Text = "Inventory Value: $" + totalValue.ToString("F2");
+            lblLowStock.Text = "Low Stock Items: " + lowStockCount;
 
         }
     }
