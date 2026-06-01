@@ -59,10 +59,6 @@ namespace WindowsFormsApp3
 
                 StartLockout();
             }
-            else
-            {
-                MessageBox.Show($"Invalid attempt {failedAttempts} of {maxAttempts}. Please try again.");
-            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
