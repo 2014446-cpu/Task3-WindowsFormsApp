@@ -179,11 +179,11 @@
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel pnlContent;
         private System.Windows.Forms.Button btnCheckout;
         private System.Windows.Forms.Button btnOrders;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnLogout;
     }
 }
 

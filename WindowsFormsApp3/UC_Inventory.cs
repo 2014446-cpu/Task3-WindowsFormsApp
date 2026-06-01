@@ -20,6 +20,11 @@ namespace WindowsFormsApp3
         public UC_Inventory()
         {
             InitializeComponent();
+            _bindingSource.DataSource = _inventoryList;
+            dgvInventory.AutoGenerateColumns = false;
+            dgvInventory.DataSource = _bindingSource;
+
+            //LoadDataFromCSV();
         }
 
         private void Inventory_Load(object sender, EventArgs e)
@@ -183,8 +188,13 @@ namespace WindowsFormsApp3
         {
             try
             {
+                dgvInventory.EndEdit();
+                _bindingSource.EndEdit();
+
                 // Convert BindingList to List
                 List<Product> listToSave = _inventoryList.ToList();
+                MessageBox.Show(Path.GetFullPath(filePath));
+
 
                 // Save to CSV file
                 InventoryService.SaveToCSV(filePath, listToSave);

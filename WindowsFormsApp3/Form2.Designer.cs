@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -36,6 +37,7 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tmrLockout = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +52,6 @@
             this.txtPassword.Size = new System.Drawing.Size(214, 41);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // label1
             // 
@@ -63,7 +64,6 @@
             this.label1.Size = new System.Drawing.Size(143, 38);
             this.label1.TabIndex = 2;
             this.label1.Text = "Password";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnLogin
             // 
@@ -117,7 +117,6 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(214, 41);
             this.txtUsername.TabIndex = 0;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // label2
             // 
@@ -130,7 +129,6 @@
             this.label2.Size = new System.Drawing.Size(151, 38);
             this.label2.TabIndex = 3;
             this.label2.Text = "Username";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 
@@ -140,7 +138,10 @@
             this.pictureBox1.Size = new System.Drawing.Size(465, 391);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // tmrLockout
+            // 
+            this.tmrLockout.Tick += new System.EventHandler(this.tmrLockout_Tick);
             // 
             // Form2
             // 
@@ -159,7 +160,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form2";
             this.Text = "FormLogin";
-            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -175,5 +175,6 @@
         private System.Windows.Forms.Button btnForgot;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer tmrLockout;
     }
 }
