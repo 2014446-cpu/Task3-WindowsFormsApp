@@ -16,15 +16,13 @@ namespace WindowsFormsApp3
     {
         private BindingList<Product> _inventoryList = new BindingList<Product>();
         private BindingSource _bindingSource = new BindingSource();
-        string filePath = "./product.csv";
+        string filePath = "product.csv";
         public UC_Inventory()
         {
             InitializeComponent();
             _bindingSource.DataSource = _inventoryList;
             dgvInventory.AutoGenerateColumns = false;
             dgvInventory.DataSource = _bindingSource;
-
-            //LoadDataFromCSV();
         }
 
         private void Inventory_Load(object sender, EventArgs e)
@@ -193,7 +191,6 @@ namespace WindowsFormsApp3
 
                 // Convert BindingList to List
                 List<Product> listToSave = _inventoryList.ToList();
-                MessageBox.Show(Path.GetFullPath(filePath));
 
 
                 // Save to CSV file
@@ -202,7 +199,7 @@ namespace WindowsFormsApp3
                 // Reload from CSV to refresh grid with saved data
                 LoadDataFromCSV();
 
-                MessageBox.Show("Changes saved to CSV successfully!");
+                MessageBox.Show("Changes saved successfully!");
             }
             catch (Exception ex)
             {
@@ -226,7 +223,7 @@ namespace WindowsFormsApp3
 
         private void dgvInventory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void dgvInventory_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -249,5 +246,24 @@ namespace WindowsFormsApp3
 
             }
         }
+
+       private void UC_Inventory_Leave(object sender, EventArgs e)
+            {
+                try
+                {
+                    dgvInventory.EndEdit();
+                    _bindingSource.EndEdit();
+
+                    List<Product> listToSave = _inventoryList.ToList();
+                    InventoryService.SaveToCSV(filePath, listToSave);
+
+                    // Optional: You can remove the MessageBox here so it doesn't pop up every time
+                    // MessageBox.Show("Changes auto-saved.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error auto-saving: " + ex.Message);
+                }
+            }
+        }
     }
-}

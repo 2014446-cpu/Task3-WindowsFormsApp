@@ -114,12 +114,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Checkout.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_Checkout.Designer.cs">
-      <DependentUpon>UC_Checkout.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC_Inventory.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -133,12 +127,6 @@
     </Compile>
     <Compile Include="UC_Home.Designer.cs">
       <DependentUpon>UC_Home.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC_Orders.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_Orders.Designer.cs">
-      <DependentUpon>UC_Orders.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
@@ -154,6 +142,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Inventory.resx">
       <DependentUpon>UC_Inventory.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -168,9 +157,6 @@
     <EmbeddedResource Include="UC_Home.resx">
       <DependentUpon>UC_Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Orders.resx">
-      <DependentUpon>UC_Orders.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="product.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -184,9 +170,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="shop-product-catalog.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

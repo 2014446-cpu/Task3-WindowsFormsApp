@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
@@ -55,7 +56,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
@@ -78,6 +78,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1070, 606);
             this.panel2.TabIndex = 2;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(36, 52);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(372, 16);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "When adding a product, you can\'t choose the ID, it will do itself";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label7
             // 
@@ -374,17 +385,6 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(36, 52);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(372, 16);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "When adding a product, you can\'t choose the ID, it will do itself";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // UC_Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -394,6 +394,7 @@
             this.Name = "UC_Inventory";
             this.Size = new System.Drawing.Size(1070, 606);
             this.Load += new System.EventHandler(this.Inventory_Load);
+            this.Leave += new System.EventHandler(this.UC_Inventory_Leave);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox2.ResumeLayout(false);

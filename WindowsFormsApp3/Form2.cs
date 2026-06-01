@@ -51,6 +51,7 @@ namespace WindowsFormsApp3
             else
             {
                 failedAttempts++;
+                MessageBox.Show($"Invalid username or password. Attempt {failedAttempts} of {maxAttempts}. Please try again.");
             }
 
 

@@ -41,12 +41,10 @@ namespace WindowsFormsApp3
 
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
-            ShowScreen(new UC_Checkout());
         }
 
         private void btnOrders_Click(object sender, EventArgs e)
         {
-            ShowScreen(new UC_Orders());
         }
 
         // This can be reused for showing any UserControl
